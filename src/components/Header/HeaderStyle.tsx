@@ -6,7 +6,7 @@ export const HeaderCss = styled.div`
         width: 100vw;
         display: flex;
         justify-content: center;
-        background-color: #222;
+        background-color: #444;
     }
     .header{
         width: 60%;
@@ -22,6 +22,10 @@ export const HeaderCss = styled.div`
         font-weight: 600;
         font-size: 12px;
         margin-right: 15px;
+    }
+    .icon-media:hover{
+        transform: scale(1.2);
+        transition: 400ms;
     }
     .icon-media a{
         color: white;
