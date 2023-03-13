@@ -24,9 +24,9 @@ export const HeaderCss = styled.div`
         color: #BF2449;
     }
     .header-left-side span{
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-weight: 600;
-        font-size: 12px;
+        font-size: 16px;
         margin-right: 15px;
     }
     .icon-media:hover{

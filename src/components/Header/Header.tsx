@@ -8,7 +8,7 @@ export function Header() {
                 <div className="header">
                     <div className="header-left-side">
                         <i className="fa-solid fa-video"></i>
-                        <span>Minhas redes</span>
+                        <span>MoveisApp</span>
                     </div>
                     <div className="header-right-side">
                         <span>Esse é um sistema de teste criador por João Vitor</span>
