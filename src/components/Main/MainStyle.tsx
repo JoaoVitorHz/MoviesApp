@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const MainCss = styled.div`
+    
+
     main {
-        width: 100vw;
+        width: 110vw;
         display: flex;
         justify-content: center;
     }
@@ -15,7 +17,7 @@ export const MainCss = styled.div`
         justify-items: center;
     }
     .movie-container{
-        width: 230px;
+        width: 300px;
         margin: 15px;
         cursor: pointer;
     }
@@ -29,7 +31,7 @@ export const MainCss = styled.div`
     }
     .movie-container span{
         color: #FFF;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-weight: 700;
         font-size: 14px;
     }

@@ -10,4 +10,8 @@ export default createGlobalStyle`
         background-color: #222;
         overflow-x: hidden;
     }
+    .container-menu-main{
+        display: flex;
+        width: 100vw;
+    }
 `;

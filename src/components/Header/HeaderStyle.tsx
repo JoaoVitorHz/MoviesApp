@@ -4,6 +4,7 @@ export const HeaderCss = styled.div`
     color: White;
     header{
         width: 100vw;
+        height: 40px;
         display: flex;
         justify-content: center;
         background-color: #444;
@@ -16,6 +17,11 @@ export const HeaderCss = styled.div`
     .header-left-side{
         display: flex;
         align-items: center;
+        gap: 15px;
+    }
+    .header-left-side i{
+        font-size: 22px;
+        color: #BF2449;
     }
     .header-left-side span{
         text-transform: uppercase;
@@ -30,13 +36,6 @@ export const HeaderCss = styled.div`
     .icon-media a{
         color: white;
         text-decoration: none;
-    }
-    .icon-media i{
-        margin: 0 15px;
-        font-size: 18px;
-        height: 40px;
-        line-height: 40px;
-        cursor: pointer;
     }
 
     .header-right-side{
