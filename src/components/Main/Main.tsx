@@ -1,38 +1,39 @@
 import { useState, useEffect } from "react";
+import { api } from "../../hooks/useFetch";
 import { MainCss } from "./MainStyle";
 
 type MoviesTypes = {
-    avatar: string;
-    titulo: string;
+    backdrop_path: string;
+    title: string;
 }
 
 export function Main() {
 
-    const [movies, setMovies] = useState<MoviesTypes[]>([]);
-
     useEffect(() => {
-        LoadMovies()
-    }, []);
+        loadMovies();
+    }, [])
 
-    async function LoadMovies (){
-        let response = await fetch('https://api.b7web.com.br/cinema/')
-        let json = await response.json();
-        setMovies(json);
-        console.log(movies)
+    const [movie, setMovie] = useState<MoviesTypes[]>([]);
+
+    const loadMovies = async () => {
+        let json = await api.getAll();
+        setMovie(json.results)
     }
 
     return(
         <MainCss>
             <main>
                 <div className="main-container">
-                    {movies.map(movie => {
+                    {
+                        movie.map((movie) => {
                         return(
                             <div className="movie-container">
-                            <img src={movie.avatar} alt="" />
-                            <span>{movie.titulo}</span>
+                            <img src={"https://image.tmdb.org/t/p/original" +  movie.backdrop_path} alt="" />
+                            <span>{movie.title}</span>
                         </div>
                         )
-                    })}
+                    })
+                    }
                 </div>
             </main>
         </MainCss>
