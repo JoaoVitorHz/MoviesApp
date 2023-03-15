@@ -5,6 +5,8 @@ import { MainCss } from "./MainStyle";
 type MoviesTypes = {
     backdrop_path: string;
     title: string;
+    release_date: string;
+    vote_average: string;
 }
 
 export function Main() {
@@ -28,11 +30,22 @@ export function Main() {
                         movie.map((movie) => {
                         return(
                             <div className="movie-container">
-                            <img src={"https://image.tmdb.org/t/p/original" +  movie.backdrop_path} alt="" />
-                            <span>{movie.title}</span>
-                        </div>
-                        )
-                    })
+                                <img src={movie.backdrop_path} alt="" />
+
+                                <div className="movie-info">
+                                    <div className="movie-info-upper">
+                                        <span>{movie.title}</span>
+
+                                    </div>
+
+                                    <div className="movie-info-lower">
+                                        <span>Lançamento: {movie.release_date}</span>
+                                        <span>Nota Geral: {movie.vote_average }</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        )})
                     }
                 </div>
             </main>

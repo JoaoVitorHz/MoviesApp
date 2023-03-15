@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const MenuCss = styled.div`
     min-width: 15%;
     height: 100vh;
-    position: fixed;
     display: flex;
     justify-content: center;
     padding: 5px;
+
     .container-menu{
         width: 90%;
         background-color: #222;
@@ -47,5 +47,24 @@ export const MenuCss = styled.div`
         height: 1px;
         background-color: rgba(255, 255, 255, 0.5);
         margin: 10px 0;
+    }
+
+    .container-menu-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        gap: 15px;
+    }
+    .container-menu-info::before,
+    .container-menu-info::after{
+        content: '';
+        display: block;
+        background-color: #FFF;
+        width: 100%;
+        height: 1px;
+    }
+    .container-menu-info span{
+        white-space: nowrap;
     }
 `;

@@ -10,23 +10,57 @@ export function Menu() {
     return(
         <MenuCss>
             <div className="container-menu">
-                <div className="container-menu-session1">
-                    <div className="icons-menu">
-                        <i className="fa-solid fa-house"></i>
-                        <span>Inicio</span>
+                {/* MENU SERIES INICIO */}
+                    <div className="container-menu-info">
+                        <span>Series</span>
                     </div>
+
                     <div className="icons-menu">
-                        <i className="fa-solid fa-phone"></i>
-                        <span>Contato</span>
+                        <i className="fa-solid fa-location-dot"></i>
+                        <span>Mais Populares</span>
+                    </div>
+
+                    <div className="icons-menu ">
+                        <i className="fa-regular fa-flag"></i>
+                        <span>Na TV</span>
                     </div>
 
                     <div className="icons-menu ">
                         <i className="fa-regular fa-star"></i>
-                        <span>Recomendação</span>
+                        <span>Mais bem avaliados</span>
                     </div>
-                </div>
-                
-                <div className="container-icons-contatos">
+                {/* MENU SERIES INICIO */}
+
+                {/* MENU FILMES INICIO */}
+                    <div className="container-menu-info">
+                        <span>Filmes</span>
+                    </div>
+
+                    <div className="icons-menu">
+                        <i className="fa-solid fa-location-dot"></i>
+                        <span>Mais Populares</span>
+                    </div>
+
+                    <div className="icons-menu ">
+                        <i className="fa-regular fa-flag"></i>
+                        <span>Em Cartaz</span>
+                    </div>
+
+                    <div className="icons-menu ">
+                        <i className="fa-solid fa-clapperboard"></i>
+                        <span>Proximas Estreias</span>
+                    </div>
+
+                    <div className="icons-menu ">
+                        <i className="fa-regular fa-star"></i>
+                        <span>Mais bem avaliados</span>
+                    </div>
+                {/* MENU FILMES FIM */}
+
+                {/* MENU SOBRE DESENVOLVEDOR COMEÇO INICIO */}
+                    <div className="container-menu-info">
+                        <span>Sobre o desenvolvedor</span>
+                    </div>
 
                     <div className="icons-menu ">
                         <a href={linkedinLink} title="Linkedin" target="_blank" className="link-icons-menu">
@@ -55,7 +89,7 @@ export function Menu() {
                             <span>Baixar Curriculo</span>
                         </a>
                     </div>
-                </div>
+                {/* MENU SOBRE DESENVOLVEDOR COMEÇO INICIO */}
 
             </div>
         </MenuCss>
