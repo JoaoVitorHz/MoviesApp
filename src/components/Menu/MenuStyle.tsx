@@ -6,65 +6,48 @@ export const MenuCss = styled.div`
     display: flex;
     justify-content: center;
     padding: 5px;
+    background-color: #050505;
+    margin-top: 20px;
+
 
     .container-menu{
-        width: 90%;
-        background-color: #222;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 40px;
     }
-    .icons-menu{
-        display: flex;
-        align-items: baseline;
-        gap: 20px;
-        border-radius: 10px;
-        padding: 15px;
-        color: #FFF;
-        cursor: pointer;
-    }
-    .icons-menu:hover{
-        background-color: #272727;
-    }
-    .icons-menu span{
-        font-size: 14px;
-        font-weight: 300;
-    }
-    .icons-menu a{
-        text-decoration: none;
-        color: #FFF;
-        display: flex;
-        align-items: baseline;
-        gap: 20px;
-    }
-    .icons-menu i{
-        font-size: 20px;
-    }
-    .container-menu-session1::after{
-        content: '';
-        display: block;
+    .div-menu-filter-title{
         width: 100%;
-        height: 1px;
-        background-color: rgba(255, 255, 255, 0.5);
-        margin: 10px 0;
-    }
-
-    .container-menu-info{
         display: flex;
         justify-content: center;
-        align-items: center;
-        color: #FFF;
-        gap: 15px;
+        margin-bottom: 5px;
+    }   
+    .div-menu-filter-title h3{
+        color: rgb(255, 96, 28);
     }
-    .container-menu-info::before,
-    .container-menu-info::after{
-        content: '';
-        display: block;
-        background-color: #FFF;
+
+    .menu-content{
         width: 100%;
-        height: 1px;
+        height: 90%;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255, 0.1);
+        display: flex;
+        flex-direction: column;
+        padding: 50px 30px 50px 30px;
+        gap: 15px;
+        overflow-y: hidden;
     }
-    .container-menu-info span{
-        white-space: nowrap;
+
+    .menu-content span{ 
+        color: #f1dac4;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover{
+            color: #f1dac4bc;
+        }
     }
+
+
 `;

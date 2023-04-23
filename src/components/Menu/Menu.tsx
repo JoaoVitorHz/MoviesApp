@@ -1,96 +1,42 @@
 import { MenuCss } from "./MenuStyle"
-import resume from "../../resume.pdf"
+import { api } from "../../hooks/useFetch"
 
-export function Menu() {
+type Props = {
+    clickFn: (data: any) => any;
+}
 
-    const linkedinLink = "https://www.linkedin.com/in/jo%C3%A3o-vitor-araujo-96a78522b/";
-    const gitHubLink = "https://github.com/JoaoVitorHz";
-    const porfolioLink = "https://statuesque-crepe-cd6310.netlify.app/";
 
+export function Menu({clickFn}: Props) {
     return(
         <MenuCss>
             <div className="container-menu">
-                {/* MENU SERIES INICIO */}
-                    <div className="container-menu-info">
-                        <span>Series</span>
+                <div className="div-menu-filter">
+                    <div className="div-menu-filter-title">
+                        <h3>Filmes</h3>
                     </div>
-
-                    <div className="icons-menu">
-                        <i className="fa-solid fa-location-dot"></i>
-                        <span>Mais Populares</span>
+                    <div className="menu-content" onClick={ async (event) => {
+                        const data = await api.getPersonalApi((event.target as HTMLButtonElement).id)
+                        clickFn(data)
+                    }}>
+                        <span id="1">Filmes em Estreias</span>
+                        <span id="2">Filmes mais populares</span>
+                        <span id="3">Filmes Mais bem Avaliados</span>
                     </div>
-
-                    <div className="icons-menu ">
-                        <i className="fa-regular fa-flag"></i>
-                        <span>Na TV</span>
+                </div>
+                <div className="div-menu-filter">
+                    <div className="div-menu-filter-title">
+                        <h3>Series</h3>
                     </div>
-
-                    <div className="icons-menu ">
-                        <i className="fa-regular fa-star"></i>
-                        <span>Mais bem avaliados</span>
+                    <div className="menu-content" onClick={ async(event) => {
+                         const data = await api.getPersonalApi((event.target as HTMLButtonElement).id)
+                         clickFn(data)
+                    }}>
+                        <span id="4">Séries de TV</span>
+                        <span id="5">Séries mais populares</span>
+                        <span id="6">Séries em Exibição hoje</span>
+                        <span id="7">Séries Mais bem Avaliados</span>
                     </div>
-                {/* MENU SERIES INICIO */}
-
-                {/* MENU FILMES INICIO */}
-                    <div className="container-menu-info">
-                        <span>Filmes</span>
-                    </div>
-
-                    <div className="icons-menu">
-                        <i className="fa-solid fa-location-dot"></i>
-                        <span>Mais Populares</span>
-                    </div>
-
-                    <div className="icons-menu ">
-                        <i className="fa-regular fa-flag"></i>
-                        <span>Em Cartaz</span>
-                    </div>
-
-                    <div className="icons-menu ">
-                        <i className="fa-solid fa-clapperboard"></i>
-                        <span>Proximas Estreias</span>
-                    </div>
-
-                    <div className="icons-menu ">
-                        <i className="fa-regular fa-star"></i>
-                        <span>Mais bem avaliados</span>
-                    </div>
-                {/* MENU FILMES FIM */}
-
-                {/* MENU SOBRE DESENVOLVEDOR COMEÇO INICIO */}
-                    <div className="container-menu-info">
-                        <span>Sobre o desenvolvedor</span>
-                    </div>
-
-                    <div className="icons-menu ">
-                        <a href={linkedinLink} title="Linkedin" target="_blank" className="link-icons-menu">
-                            <i className="fa-brands fa-linkedin"></i>
-                            <span>Linkedin</span>
-                        </a>
-                    </div>
-                    
-                    <div className="icons-menu ">
-                        <a href={gitHubLink} title="GitHub" target="_blank" >
-                            <i className="fa-brands fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                    
-                    <div className="icons-menu ">
-                        <a href={porfolioLink} title="Porfolio" target="_blank">
-                            <i className="fa-solid fa-file-circle-exclamation"></i>
-                            <span>Portfolio</span>
-                        </a>
-                    </div>
-
-                    <div className="icons-menu ">
-                        <a href={resume} download="Curriculo João Vitor" title="Curriculo">
-                            <i className="fa-solid fa-file-arrow-down"></i>
-                            <span>Baixar Curriculo</span>
-                        </a>
-                    </div>
-                {/* MENU SOBRE DESENVOLVEDOR COMEÇO INICIO */}
-
+                </div>
             </div>
         </MenuCss>
     )
