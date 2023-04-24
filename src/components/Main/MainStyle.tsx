@@ -37,7 +37,6 @@ export const MainCss = styled.div`
         display: flex;
         flex-direction: column;
     }
-
     .movie-info-lower{
         display: flex;
         justify-content: space-between;
@@ -46,5 +45,29 @@ export const MainCss = styled.div`
         color: #ccc;
         font-size: 12px;
         font-weight: 400;
+    }
+
+    /* MAX WIDTH 1376 PX*/
+    @media (max-width: 1376px){
+        .main-container{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    /* MAX WIDTH 1024 PX */
+    @media (max-width: 1024px){
+        .main-container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* MAX WIDHT 800 PX */
+    @media (max-width: 800px){
+        .main-container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .movie-info-lower span{
+            font-size: 10px;
+        }
     }
 `;

@@ -24,7 +24,7 @@ export default createGlobalStyle`
     }
     .Modal {
         width: 1376px;
-        height: 50%;
+        height: auto;
         padding: 20px;
 
         background-color: #151515;
@@ -110,4 +110,44 @@ export default createGlobalStyle`
         display: block;
     }
 
+    /* MAX WIDTH 1440 PX */
+    @media (max-width: 1440px){
+        .Modal {
+            width: 1080px;
+        }
+    }
+
+    /* MAX WIDTH 1376 PX */
+    @media (max-width: 1376px){
+        .Modal {
+            width: 1080px;
+        }
+    }
+
+    /* MAX WIDTH 1280 PX */
+    @media (max-width: 1280px){
+        .Modal {
+            width: 1080px;
+        }
+    }
+
+    /* MAX WIDTH 1024 PX */
+    @media (max-width: 1024px){
+        .Modal {
+            width: 800px;
+        }
+        .div-modal-content-right h1{
+            width: 100%;
+        }
+        .span-description{
+            width: 100%;
+        }
+    }
+
+    /* MAX WIDTH 800 PX */
+    @media (max-width: 800px) and (max-height: 600px){
+        .Modal {
+            width: 600px;
+        }
+    }
 `;
