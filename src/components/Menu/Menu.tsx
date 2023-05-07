@@ -1,10 +1,11 @@
-import { MenuCss } from "./MenuStyle"
-import { api } from "../../hooks/useFetch"
+import { MenuCss } from "./MenuStyle";
+import { request } from "../../hooks/useFetch";
+
+import { MoviesType } from "../../types/Movie";
 
 type Props = {
-    clickFn: (data: any) => any;
+    clickFn: (data: MoviesType) => any;
 }
-
 
 export function Menu({clickFn}: Props) {
     return(
@@ -15,7 +16,7 @@ export function Menu({clickFn}: Props) {
                         <h3>Filmes</h3>
                     </div>
                     <div className="menu-content" onClick={ async (event) => {
-                        const data = await api.getPersonalApi((event.target as HTMLButtonElement).id)
+                        const data = await request.getData((event.target as HTMLButtonElement).id)
                         clickFn(data)
                     }}>
                         <span id="1">Filmes em Estreias</span>
@@ -28,7 +29,7 @@ export function Menu({clickFn}: Props) {
                         <h3>Series</h3>
                     </div>
                     <div className="menu-content" onClick={ async(event) => {
-                         const data = await api.getPersonalApi((event.target as HTMLButtonElement).id)
+                         const data = await request.getData((event.target as HTMLButtonElement).id)
                          clickFn(data)
                     }}>
                         <span id="4">Séries de TV</span>

@@ -1,29 +1,31 @@
-import { useState } from "react";
 import GlobalStyled from "./GlobalStyled"
+
+import Modal from "react-modal";
+import { useState } from "react";
+import { MoviesType } from "./types/Movie";
+
 import { Header } from "./components/Header/Header"
 import { Main } from "./components/Main/Main"
 import { Menu } from "./components/Menu/Menu"
-import Modal from "react-modal";
 
 Modal.setAppElement('#root');
 
 function App() {
 
-  const [dados, setA] = useState()
+  const [movies, setMovies] = useState<MoviesType>()
 
-  const eventMain = (data: any) => {
-    setA(data)
+  const getMovie = (data: MoviesType) => {
+    setMovies(data)
   }
 
   return (
     <> 
-    <GlobalStyled/>
-    <Header/>
-    <div className="container-menu-main">
-      <Menu clickFn={eventMain}/>
-      <Main data={dados}/>
-    </div>
- 
+      <GlobalStyled/>
+      <Header/>
+      <div className="container-menu-main">
+        <Menu clickFn={getMovie}/>
+        <Main data={movies}/>
+      </div>
     </>
   )
 }

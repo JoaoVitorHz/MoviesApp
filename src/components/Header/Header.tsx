@@ -1,6 +1,5 @@
 import { HeaderCss } from "./HeaderStyle"
-
-import resume from '../../../resume.pdf'
+import resume from '../../assets/resume.pdf'
 
 export function Header() {
 
