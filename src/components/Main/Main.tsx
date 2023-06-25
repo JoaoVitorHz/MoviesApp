@@ -50,8 +50,14 @@ export function Main(data: any) {
                                     </div>
 
                                     <div className="movie-info-lower">
-                                        <span>Lançamento: {elementData.release_date}</span>
-                                        <span>Nota Geral: {elementData.vote_average }</span>
+                                        <span>
+                                            <i className="fa-solid fa-calendar-day"></i>
+                                            Lançamento: {elementData.release_date}
+                                        </span>
+                                        <span>
+                                            <i className="fa-regular fa-circle-check"></i> 
+                                            Nota Geral: {elementData.vote_average }
+                                        </span>
                                     </div>
                                 </div>
                             </div>

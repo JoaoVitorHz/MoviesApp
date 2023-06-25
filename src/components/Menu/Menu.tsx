@@ -19,9 +19,18 @@ export function Menu({clickFn}: Props) {
                         const data = await request.getData((event.target as HTMLButtonElement).id)
                         clickFn(data)
                     }}>
-                        <span id="1">Filmes em Estreias</span>
-                        <span id="2">Filmes mais populares</span>
-                        <span id="3">Filmes Mais bem Avaliados</span>
+                        <span id="1">
+                            <i className="fa-solid fa-font-awesome"></i>
+                            Filmes em Estreias
+                        </span>
+                        <span id="2">
+                            <i className="fa-solid fa-fire"></i>
+                            Filmes mais populares
+                        </span>
+                        <span id="3">
+                            <i className="fa-regular fa-circle-check"></i>
+                            Filmes melhores avaliados
+                        </span>
                     </div>
                 </div>
                 <div className="div-menu-filter">
@@ -32,10 +41,22 @@ export function Menu({clickFn}: Props) {
                          const data = await request.getData((event.target as HTMLButtonElement).id)
                          clickFn(data)
                     }}>
-                        <span id="4">Séries de TV</span>
-                        <span id="5">Séries mais populares</span>
-                        <span id="6">Séries em Exibição hoje</span>
-                        <span id="7">Séries Mais bem Avaliados</span>
+                        <span id="4">
+                            <i className="fa-solid fa-tv"></i>
+                            Séries de TV
+                        </span>
+                        <span id="5">
+                            <i className="fa-solid fa-fire"></i>
+                            Séries mais populares
+                        </span>
+                        <span id="6">
+                            <i className="fa-solid fa-calendar-day"></i>
+                            Séries em Exibição hoje
+                        </span>
+                        <span id="7">
+                            <i className="fa-regular fa-circle-check"></i>
+                            Séries Mais bem Avaliados
+                        </span>
                     </div>
                 </div>
             </div>

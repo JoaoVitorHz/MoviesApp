@@ -18,15 +18,19 @@ export const MainCss = styled.div`
     }
     .movie-container{
         cursor: pointer;
+        padding: 20px;
+        border-radius: 5px;
+        background-color:#202024;
+        transition: 200ms;
+    }
+    .movie-container:hover{
+        transform: scale(1.05);
     }
     .movie-container img{
         width: 100%;
         border-radius: 6px;
     }
-    .movie-container img:hover{
-        transform: scale(1.05);
-        transition: 300ms;
-    }
+   
     .movie-container span{
         color: #FFF;
         text-transform: capitalize;
@@ -36,6 +40,7 @@ export const MainCss = styled.div`
     .movie-info{
         display: flex;
         flex-direction: column;
+        gap: 5px;
     }
     .movie-info-lower{
         display: flex;
@@ -45,6 +50,10 @@ export const MainCss = styled.div`
         color: #ccc;
         font-size: 12px;
         font-weight: 400;
+    }
+    .movie-info-lower span i{
+        color: #00b37e;
+        margin-right: 5px;
     }
 
     /* MAX WIDTH 1376 PX*/

@@ -4,10 +4,11 @@ export default createGlobalStyle`
     *{
         padding: 0; margin: 0; border: 0; outline: 0;
         box-sizing: border-box;
-        font-family: 'Sora', sans-serif;
+        /* font-family: 'Sora', sans-serif; */
+        font-family: 'Roboto', sans-serif;
     }
     body{
-        background-color: #050505;
+        background-color: #121214;
         overflow-x: hidden;
     }
     .container-menu-main{
