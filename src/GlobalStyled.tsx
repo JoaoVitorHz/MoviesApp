@@ -15,6 +15,8 @@ export default createGlobalStyle`
         display: flex;
         width: 100vw;
     }
+
+    /* STYLES MOVIES DETAIL MODAL */
     .Overlay {
         position: fixed;
         top: 0;
@@ -33,13 +35,7 @@ export default createGlobalStyle`
         position: absolute;
         top: 50%;
         left: 50%;
-        right: auto;
-        bottom: auto;
         transform: translate(-50%, -50%);
-        margin-right: -50%;
-
-        display: flex;
-        flex-direction: column;
     }
     .div-modal-header{
         width: 100%;
@@ -47,17 +43,15 @@ export default createGlobalStyle`
         display: flex;
         justify-content: flex-end;
         align-items: center;
-
-       & i{
-            color: #FFF;
-            font-size: 25px;
-            cursor: pointer;
-       }
-       & i:hover{
-            color: rgb(255, 96, 28);
-       }
     }
-
+    .div-modal-header i{
+        color: #FFF;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .div-modal-header i:hover{
+        color: rgb(255, 96, 28);
+    }
     .div-modal-content{
         width: 100%;
         height: 100%;
@@ -68,33 +62,40 @@ export default createGlobalStyle`
     .div-modal-content-left{
         width: 50%;
         height: 100%;
-
-        & img{
-            width: 100%;
-            border-radius: 10px;
-        }
     }
+    .div-modal-content-left img{
+        width: 100%;
+        border-radius: 10px;
+        border: 3px solid #00b37e;
+    }
+
     .div-modal-content-right{
         width: 50%;
         height: 100%;
     }
     .div-modal-content-right h1{
         width: 500px;
-        color: #f1dac4;
         margin-bottom: 5px;
+        color: #FFF;
     }
     .div-modal-content-right span{
-        color: #f1dac4;
+        color: #FFF;
     }
     .div-modal-content-subtitle{
         width: 500px;
+        margin-bottom: 30px;
+
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 30px;
     }
     .div-modal-content-subtitle span{
         font-size: 12px;
+    }
+    .div-modal-content-subtitle span i{
+        color: #00b37e;
+        font-size: 16px;
+        margin-right: 5px;
     }
     .span-vote-average{
         order: 3;
@@ -103,9 +104,8 @@ export default createGlobalStyle`
         content: '';
         width: 10px;
         height: 2px;
-        background-color: #f1dac4;
+        background-color: #FFF;
     }
-
     .span-description{
         width: 500px;
         display: block;

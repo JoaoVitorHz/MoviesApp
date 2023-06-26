@@ -82,8 +82,14 @@ export function Main(data: any) {
                     <div className="div-modal-content-right">
                         <h1>{modalData?.title}</h1>
                         <div className="div-modal-content-subtitle">
-                            <span>{modalData?.release_date}</span>
-                            <span className="span-vote-average"> Nota Geral: {modalData?.vote_average}</span>
+                            <span>
+                                <i className="fa-solid fa-calendar-day"></i>
+                                {modalData?.release_date}
+                            </span>
+                            <span className="span-vote-average"> 
+                                <i className="fa-regular fa-circle-check"></i> 
+                                Nota Geral: {modalData?.vote_average}
+                            </span>
                         </div>
                         <span className="span-description">{modalData?.overview}</span>
                     </div>
