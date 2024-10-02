@@ -1,25 +1,27 @@
-## Introdução 
-Esse projeto te informar quias são os filmes que em cartaz no cinema! 🤩
+## Introduction
+This project informs you about which movies are currently showing in theaters! 🤩
 
-Caso você queira ver o projeto sem ter que clonar o repositorio aqui esta o link `https://extraordinary-froyo-c2ed82.netlify.app/`
+If you want to see the project without cloning the repository, here is the link: `https://extraordinary-froyo-c2ed82.netlify.app/`
 
-## Tecnologias Usadas 
+## Technologies Used
 - React
-- Typescript
-- Javascript
+- TypeScript
+- JavaScript
 - Styled-Components
 - HTML
 - CSS
-  
- ## Para usar o projeto 
- - Para você testar o projeto e necessario que você tenha o `Node` é o `NPM` instalado na sua maquina!
- 
- - Agora faça clone do repositorio.
- - Depois de clonar o repostiorio instale as dependecia do projeto.
+
+## How to Use the Project
+- To test the project, you need to have `Node` and `NPM` installed on your machine!
+
+- Now, clone the repository.
+- After cloning the repository, install the project dependencies.
+
  ```
  npm install
  ```
- - Agora é só rodar a aplicação.
+ - Now you can run the application.
+
  ```
  npm run dev
  ```
